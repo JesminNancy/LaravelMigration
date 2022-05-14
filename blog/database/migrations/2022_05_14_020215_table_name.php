@@ -24,6 +24,14 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::create('bangladesh', function(Blueprint $table){
+        
+            $table->bigIncrements('id');
+            $table->String('name');
+            $table->String('roll');
+            $table->String('class');
+            $table->timestamps();
+        
+        });
     }
 };
